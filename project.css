@@ -7,7 +7,7 @@ header{
     margin: 0%;
     padding: 2px;
     display: grid;
-    grid-template-columns:1fr 2fr 12fr 2fr;
+    grid-template-columns:0.5fr 1fr 1.7fr 12fr 2fr;
     color: white;
     font-size: large;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page-Staff</title>
+</head>
+<style>
+   *{
+    margin: 0;
+    padding: 0%;
+}
+header{
+    overflow: hidden;
+    margin: 0%;
+    padding: 2px;
+    display: grid;
+    grid-template-columns:0.5fr 1fr 1.7fr 12fr 2fr;
+    color: white;
+    font-size: large;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #B50000;
+}
+
+header a, header div{    
+    text-decoration: none;
+    color: white;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+    #form {
+        border-radius: 30px;
+        height: 400px;
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(247, 241, 231);
+        /* background-color: rgb(255, 255, 255); */
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        margin: 8.5%;
+        margin-left: 30%;
+
+
+    }
+
+    #icn {
+        color: black;
+    }
+
+    input {
+        /* text-decoration: underline; */
+        font-size: 20px;
+        border: none;
+        border-bottom: 1px solid black;
+        text-align: center;
+        height: 8%;
+        background: none;
+    }
+
+    #regiJump {
+        position: relative;
+        left: 25px;
+        top: 40px;
+    }
+    #drop{
+        display: none;
+        height: 120px;
+        width: 100px;
+        border-radius: 10px;
+        background-color: rgb(247, 241, 231);
+        position: relative;
+        z-index: 100;
+        float: right;
+        right: 73px;
+    }
+    .item{
+        position: relative;
+        right: 10px;
+        margin-top: 30px;
+        text-align: center;
+        list-style: none;
+    }
+    #on{
+        display: none;
+    }
+    #stdnt{
+        position: relative;
+        left: 70px;
+        bottom: 20px;
+    }
+    footer{
+    flex-wrap: wrap;
+      text-align: center;
+      background-color: #B50000;
+      color: white;
+      padding: 10px;
+  }
+</style>
+
+<body>
+    <header id="navbar">
+        <br>
+        <a href="index.html">Home</a>
+        <a href="">Order Online</a>
+        <a href="">Cart</a>
+        <div class="dropdown">
+            <section class="dropbtn">Login</section>
+            <div class="dropdown-content">
+            <a href="login_Students.html">Student Login</a>
+            <a href="login_Staff.html">Staff Login</a>
+            </div>
+        </div>
+    </header>
+    <div id="drop">
+        <ul class="item">
+            <li class="item"> <a href="login_Students.html" >Student</a> </li>
+            <li class="item"> <a href="login_Staff.html" >Staff</a> </li>
+        </ul>
+    </div>
+        <div id="drop">
+            <ul class="item">
+                <li class="item"> <a href="login_Students.html" >Student</a> </li>
+                <li class="item"> <a href="login_Staff.html" >Staff</a> </li>
+            </ul>
+        </div>
+        <div id="form">
+            <h4 id="stdnt">Staff Login</h4>
+            <input type="text" placeholder="Username/Email-Id">
+            <br>
+            <input type="password" placeholder="Password">
+            <br>
+            <a href="Register.html" id="regiJump">New User? Click here to register.</a>
+        </div>
+        <footer>
+            Copyright © 2021 Keshav Mahavidyalaya
+         </footer>
+</body>
+
+
+<script>
+    function dropon(params) {
+        let itm = document.getElementById("off");
+        itm.style.display="none";
+        let drp = document.getElementById("drop");
+        drp.style.display="inline";
+        let itm2 = document.getElementById("on");
+        itm2.style.display="block";
+    }
+    function dropoff(params) {
+        let drp = document.getElementById("drop");
+        drp.style.display="none";
+        let itm2 = document.getElementById("on");
+        itm2.style.display="none";
+        let itm = document.getElementById("off");
+        itm.style.display="block";
+    }
+</script>
+</html>
