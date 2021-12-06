@@ -181,11 +181,17 @@ input[type="submit"] {
             $email = $_POST['mail'];
             $pass = $_POST['pass'];
             $repass = $_POST['repass'];
+            $sqlQ = "Select * from register where email = '$email'";
+            $result = mysqli_query($connect,$sqlQ);
+            $rows = mysqli_num_rows($result);
             if ($repass!=$pass) {
-                echo '<script>alert("Password does not match please try again.")</script>';
+                echo '<script>alert("Please re-enter password carefully as it does not match.")</script>';
+            }
+            elseif ($rows!=0) {
+                echo '<script>alert("Email already exist. Register with new email address or login with the current account")</script>';
             }
             else {
-                $sql = "INSERT INTO `register` (`name`, `email`, `password`) VALUES ('Anirudh', 's@sss', 'asdf1234')";
+                $sql = "INSERT INTO `register` (`name`, `email`, `password`) VALUES ('$name', '$email', '$pass')";
                 mysqli_query($connect,$sql);
             }
 
