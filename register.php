@@ -69,7 +69,7 @@ header div {
     display: block;
 }
 
-#form {
+form {
     border-radius: 30px;
     height: 600px;
     width: 400px;
@@ -83,7 +83,7 @@ header div {
     margin: 7%;
 }
 
-#form:hover {
+form:hover {
     transform: scale(1.1);
     box-shadow: 20px 20px 10px rgb(46, 46, 28);
 
@@ -135,13 +135,12 @@ footer {
     padding: 10px;
 }
 
-input[type="submit"] {
+.submitbtn {
     text-align: center;
     font-family: Calibri;
     background-color: indianred;
     color: white;
     font-size: 20px;
-    padding: 10px 20px 20px 20px;
     border-radius: 4px;
     border: none;
     cursor: pointer;
@@ -152,23 +151,7 @@ input[type="submit"] {
 </style>
 
 <body>
-    <header id="navbar">
-        <br>
-        <a href="index.html">Home</a>
-        <a href="..//Order Menu/Order Menu Page.html">Order Online</a>
-        <a href="">Cart</a>
-        <div class="dropdown">
-            <section class="dropbtn">Login</section>
-            <div class="dropdown-content">
-                <a href="login_Students.html">Student Login</a>
-                <a href="login_Staff.html">Staff Login</a>
-            </div>
-        </div>
-    </header>
-    <div id="form">
-        <legend>Register</legend>
-        <br><br>
-        <?php
+<?php
             $servername = "localhost";
             $username = "root";
             $password = "";
@@ -198,6 +181,23 @@ input[type="submit"] {
             
 
         ?>
+    <header id="navbar">
+        <br>
+        <a href="index.html">Home</a>
+        <a href="..//Order Menu/Order Menu Page.html">Order Online</a>
+        <a href="">Cart</a>
+        <div class="dropdown">
+            <section class="dropbtn">Login</section>
+            <div class="dropdown-content">
+                <a href="login_Students.html">Student Login</a>
+                <a href="login_Staff.html">Staff Login</a>
+            </div>
+        </div>
+    </header>
+    <div id="form">
+        <legend>Register</legend>
+        <br><br>
+        
 
         <form action="register.php" method="post">
             <input type="text" placeholder="Name" name="name">
@@ -208,17 +208,17 @@ input[type="submit"] {
             <br>
             <input type="password" placeholder="retype Password" name="repass">
             <br>
-            <button type="submit" class="btn btn-primary">Submit</button>
-
-            <br>
-        </form>
+        
         <label>Register as a :</label><br>
         <label for="Student">Student</label>
-        <input type="radio" value="Student" name="gender" id="Student">
+        <input type="radio" value="Student" name="person" id="Student">
         <label for="Staff">Staff</label>
-        <input type="radio" value="Staff" name="gender" id="Staff">
+        <input type="radio" value="Staff" name="person" id="Staff">
         <a href="login_Students.html" id="regiJump">Already have an account? Click here to login.</a>
+        <br>
+        <button type="submit" class="submitbtn">Submit</button>
     </div>
+    </form>
     <footer>
         Copyright © 2021 Keshav Mahavidyalaya
     </footer>
