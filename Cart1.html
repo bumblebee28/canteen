@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cart</title>
+	<style type="text/css">
+		header{
+            overflow: hidden;
+            margin: 0%;
+            padding: 2px;
+            display: grid;
+            grid-template-columns:0.5fr 1fr 1.7fr 12fr 2fr;
+            color: white;
+            font-size: large;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: #B50000;
+        }
+
+        header a, header div{    
+            text-decoration: none;
+            color: white;
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }  
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+  
+       .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 2;
+        }
+  
+       .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+  
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+  
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+		h1{
+			font-family: Britannic Bold;
+            text-align: center;
+            font-weight: bold;
+            font-size: 35px;
+            color: darkred;
+            background-color: lightpink;
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        table,th{
+            border: 2px solid lightsteelblue;
+            border-collapse: collapse;
+            width: 100%;
+            background-color: lavenderblush;
+            border-radius: 10px;  
+
+        }
+
+        th{
+            text-align: center;
+            font-size: 20px;
+            border-spacing: 15px;
+            width: 20%;
+            padding: 10px;                
+        }
+
+        td{
+            font-weight: bolder;
+            font-size: 25px;
+        }
+
+        footer{
+            flex-wrap: wrap;
+            text-align: center;
+            background-color: #B50000;
+            color: white;
+            padding: 10px;
+        }
+	</style>
+</head>
+
+<body>
+	    <div style="background-image: url('bgCart.jpg');">
+        <header id="navbar">
+        <br>
+        <a href="#home">Home</a>
+        <a href="..//Order Menu/Order Menu Page.html">Order Online</a>
+        <a href="">Cart</a>
+        <div class="dropdown">
+            <section class="dropbtn">Login</section>
+            <div class="dropdown-content">
+            <a href="login_Students.html">Student Login</a>
+            <a href="login_Staff.html">Staff Login</a>
+            </div>
+        </div>
+        </header>
+        <h1>Order Details </h1>
+        <table>
+            <tr>
+                <th> S.No.</th>
+                <th> Item Name </th>
+                <th> Price </th>
+                <th> Quantity </th>
+                <th> Total </th>
+            </tr>
+            <tr style="height: 400px;">
+            </tr>
+            <tr>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td>Total=</td>
+            </tr>
+        </table>
+        <br><br><br></br>
+
+        <footer>
+       Copyright © 2021 Keshav Mahavidyalaya
+       </footer>
+
+</body>
+</html>
